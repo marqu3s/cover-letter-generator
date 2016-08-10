@@ -7,7 +7,7 @@
  */
 
 // Row number from where to fill in the data (2 = first row because 1 is the header row)
-var CUSTOMER_ID = 2; // <=============================== Adjust this
+var COMPANY_ROW = 2; // <=============================== Adjust this
 
 // Google Doc id from the document template (Get ids from the URL)
 var SOURCE_TEMPLATE = ""; // <========================== Adjust this
@@ -84,8 +84,8 @@ function fillData() {
 
   // XXX: Cannot be accessed when run in the script editor?
   // WHYYYYYYYYY? Asking one number, too complex?
-  //var CUSTOMER_ID = Browser.inputBox("Enter customer number in the spreadsheet", Browser.Buttons.OK_CANCEL);
-  if (!CUSTOMER_ID) {
+  //var COMPANY_ROW = Browser.inputBox("Enter customer number in the spreadsheet", Browser.Buttons.OK_CANCEL);
+  if (!COMPANY_ROW) {
       return; 
   }
 
@@ -96,7 +96,7 @@ function fillData() {
 
   Logger.log("Processing columns:" + columns);
 
-  var customerData = getRowAsArray(sheet, CUSTOMER_ID);  
+  var customerData = getRowAsArray(sheet, COMPANY_ROW);  
   Logger.log("Processing data:" + customerData);
 
   // Assume third column holds the company name
