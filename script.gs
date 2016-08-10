@@ -13,7 +13,7 @@ var COMPANY_ROW = 2; // <=============================== Adjust this
 var SOURCE_TEMPLATE = ""; // <========================== Adjust this
 
 // In which spreadsheet we have all the customer data
-var CUSTOMER_SPREADSHEET = ""; // <===================== Adjust this
+var SPREADSHEET = ""; // <============================== Adjust this
 
 // In which Google Drive we toss the target documents
 var TARGET_FOLDER = ""; // <============================ Adjust this
@@ -80,7 +80,7 @@ function replaceParagraph(doc, keyword, newText) {
  */
 function fillData() {
 
-  var data = SpreadsheetApp.openById(CUSTOMER_SPREADSHEET);
+  var data = SpreadsheetApp.openById(SPREADSHEET);
 
   // XXX: Cannot be accessed when run in the script editor?
   // WHYYYYYYYYY? Asking one number, too complex?
