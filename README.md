@@ -71,47 +71,61 @@ Now go to the Tools menu => Script editor.
 On the window that opens, paste the content from the file script.gs.
 Pay attention to the lines 10, 13, 16 and 19. We need to adjust them with the IDs you got on the steps above.
 
+---
+
 Line 10:
 ```
 var COMPANY_ROW = 2;
 ```
 You will have to adjust this line every time you want to generate a cover letter. It indicates with line of the spreadsheet should be read to get the information needed. Remeber, 2 is the first row of data, 3 is the second row of data, and so on.
 
+---
+
 Line 13:
 ```
 var SOURCE_TEMPLATE = "";
 ```
 You will have to adjust this line only once. Insert the ID of the cover letter template.
+
 Example: var SOURCE_TEMPLATE = "14X68W6rIHHnwC2GjTqU33QX-_y5IB40hk7xHsavRcs8";
+
+---
 
 Line 16:
 ```
 var SPREADSHEET = "";
 ```
 You will have to adjust this line only once. Insert the ID of the spreadsheet file.
+
 Example: var SPREADSHEET = "1acOPe105zS4mJxS8E1fYlbzp0SwF0RbUfkR5H5CWN1U";
+
+---
 
 Line 19:
 ```
 var TARGET_FOLDER = "";
 ```
 You will have to adjust this line only once. Insert the ID of the folder to save the cover letter to.
+
 Example: var TARGET_FOLDER = "0B4xDN2g6Yk_9NzJRVmZsOExzTXc";
 
-Save the script.
+---
+
+Save the script after adjusting this lines.
 
 ### Usage
 
 Once you finish the configuration above, you're ready to rock!
 
 To generate a new cover letter:
+
 1. Enter the information about the company the job position, recruiter, etc in the spreadsheet on a new line.
 2. Open the Cover Letter template document.
 3. Go to Tools menu => Script Editor.
 4. Adjust line 10 of the script, inserting the correct row number to get data from.
 5. Save the script.
 6. Hit the run button and wait a few seconds.
-7. Open the folder you expect the cover letter and look for your new cover letter. The file name will be "Company Name Cover Letter".
+7. Open the folder you expect the cover letter to be in and look for it. The file name will be **"Company Name Cover Letter"**.
 
 
 That's it!
