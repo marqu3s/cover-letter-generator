@@ -30,40 +30,37 @@ https://docs.google.com/document/d/14X68W6rIHHnwC2GjTqU33QX-_y5IB40hk7xHsavRcs8/
 
 Create a spreadsheet like the one above in your Google Drive.
 The first row contains the column names. They are used as the tokens' names. Avoid using spaces in it.
-A token is in the format {{ + TheColumnName + }}
-From the second row forward, add the information you want to appear in the cover letter.
+
+A token is in the format **{{ + TheColumnName + }}**
+
+From the second row forward, add the information you want to appear in the cover letters.
 Example:
 
-{|
-|-
-! Date
-! CompanyName
-! CompanyAddress
-|-
-| August 8, 2016
-| Axiom Zen
-| 788 Beatty St b1, Vancouver, BC V6B 2M1, Canada
-|}
+| Date             | CompanyName        | CompanyAddress                                    |
+| ---------------- | ------------------ | ------------------------------------------------- |
+| August 8, 2016   | Axiom Zen          | 788 Beatty St b1, Vancouver, BC V6B 2M1, Canada   |
 
 Now create a document to be your cover letter template.
 Inside it place tokens where you want to insert the values from the spreadsheet.
 The available tokens from the example spreadsheet are:
-{{Date}}
-{{RecruiterName}}
-{{RecruiterJobTitle}}
-{{CompanyName}}
-{{CompanyAddress}}
-{{Salutation}}
+* {{Date}}
+* {{RecruiterName}}
+* {{RecruiterJobTitle}}
+* {{CompanyName}}
+* {{CompanyAddress}}
+* {{Salutation}}
 
 Now you need to get the IDs of your spreadsheet, template and for the folder where you want the script to save the cover letter. We can get those from the browser URL.
 
 For the spreadsheet example, its URL is:
 https://docs.google.com/spreadsheets/d/1acOPe105zS4mJxS8E1fYlbzp0SwF0RbUfkR5H5CWN1U/pubhtml
-So its ID is *1acOPe105zS4mJxS8E1fYlbzp0SwF0RbUfkR5H5CWN1U*
+
+So its ID is **1acOPe105zS4mJxS8E1fYlbzp0SwF0RbUfkR5H5CWN1U**
 
 For the template example, its URL is:
 https://docs.google.com/document/d/14X68W6rIHHnwC2GjTqU33QX-_y5IB40hk7xHsavRcs8/pub
-So its ID is *14X68W6rIHHnwC2GjTqU33QX-_y5IB40hk7xHsavRcs8*
+
+So its ID is **14X68W6rIHHnwC2GjTqU33QX-_y5IB40hk7xHsavRcs8**
 
 Now open the docs you created and take note of that IDs.
 
@@ -102,7 +99,20 @@ You will have to adjust this line only once. Insert the ID of the folder to save
 Example: var TARGET_FOLDER = "0B4xDN2g6Yk_9NzJRVmZsOExzTXc";
 
 Save the script.
-On the select dropdown list, choose fillData and click on the run button (the one to left to the bug button).
-It will ask for some permissions the manage the files on your Google Drive. You need to allow it because it creates a new file for you, that is the cover letter with the tokens replaced.
+
+### Usage
+
+Once you finish the configuration above, you're ready to rock!
+
+To generate a new cover letter:
+1. Enter the information about the company the job position, recruiter, etc in the spreadsheet on a new line.
+2. Open the Cover Letter template document.
+3. Go to Tools menu => Script Editor.
+4. Adjust line 10 of the script, inserting the correct row number to get data from.
+5. Save the script.
+6. Hit the run button and wait a few seconds.
+7. Open the folder you expect the cover letter and look for your new cover letter. The file name will be "Company Name Cover Letter".
+
 
 That's it!
+Enjoy!
